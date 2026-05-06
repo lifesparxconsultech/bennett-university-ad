@@ -81,6 +81,15 @@ export default function HeroSection() {
 
       // no-cors means we can't read the response — assume success
       setStatus("success")
+      
+      // Trigger PDF download
+      const link = document.createElement("a")
+      link.href = "/bourcher.pdf"
+      link.download = "Bennett_University_Online_MBA_Brochure.pdf"
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+
       setForm({ name: "", phone: "", email: "" })
       setErrors({ name: "", phone: "", email: "" })
     } catch {
@@ -144,15 +153,15 @@ export default function HeroSection() {
             </ul>
 
             <div className="flex flex-wrap gap-4 pt-2">
-              <button onClick={scrollToForm} className="bg-red-600 hover:bg-red-500 active:bg-red-700 text-white px-7 py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 shadow-lg shadow-red-900/30 hover:-translate-y-0.5">
+              <button onClick={scrollToForm} className="bg-red-600 hover:bg-red-500 active:bg-red-700 text-white px-7 py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 shadow-lg shadow-red-900/30 hover:-translate-y-0.5 cursor-pointer">
                 Download Brochure
               </button>
-              <button onClick={scrollToForm} className="border border-white/30 hover:border-white/60 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-7 py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 hover:-translate-y-0.5">
+              <button onClick={scrollToForm} className="border border-white/30 hover:border-white/60 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-7 py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 hover:-translate-y-0.5 cursor-pointer">
                 Check Scholarship
               </button>
             </div>
 
-            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-3">
+            <div className="inline-flex items-center gap-3 px-4 py-3">
               <div className="w-9 h-9 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
                 <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
