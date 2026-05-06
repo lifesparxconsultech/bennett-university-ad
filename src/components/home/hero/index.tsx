@@ -120,7 +120,7 @@ export default function HeroSection() {
           <div className="space-y-6">
             <span className="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/40 text-red-400 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide backdrop-blur-sm">
               <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-              ADMISSIONS OPEN 2024
+              ADMISSIONS OPEN 2026
             </span>
 
             <div className="space-y-1">
