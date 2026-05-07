@@ -59,16 +59,14 @@ export default function FAQSection() {
                 >
                   <span className="text-gray-800 text-sm font-light">{faq.question}</span>
                   <FiChevronDown
-                    className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-300 ${
-                      openIndex === i ? "rotate-180" : ""
-                    }`}
+                    className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-300 ${openIndex === i ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 
                 <div
-                  className={`grid transition-all duration-300 ease-in-out ${
-                    openIndex === i ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                  }`}
+                  className={`grid transition-all duration-300 ease-in-out ${openIndex === i ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                    }`}
                 >
                   <div className="overflow-hidden">
                     <p className="px-6 pb-5 text-gray-500 text-sm font-light leading-relaxed border-t border-gray-50 pt-3">
@@ -88,7 +86,9 @@ export default function FAQSection() {
               Ready to Transform Your Career?
             </p>
             <p className="text-white text-base sm:text-lg font-light leading-relaxed max-w-sm mx-auto">
-              Join the next cohort of future-ready business leaders. Applications are closing soon.
+              Your next career move is waiting — your MBA shouldn’t.
+              <br />
+              Cohorts are filling fast. Secure your seat today.
             </p>
           </div>
 

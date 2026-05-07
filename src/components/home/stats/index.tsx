@@ -14,7 +14,7 @@ import { TbTargetArrow } from "react-icons/tb"
 
 // ── Stats Bar ──────────────────────────────────────────────
 const stats = [
-  { icon: <FiUsers className="w-5 h-5" />, value: "13,500+", label: "Lives Transformed" },
+  { icon: <FiUsers className="w-5 h-5" />, value: "13,500+", label: "Alumini across 40+ Cities" },
   { icon: <FiBriefcase className="w-5 h-5" />, value: "1,200+", label: "Placement Partners" },
   { icon: <FiAward className="w-5 h-5" />, value: "Grade A+", label: "NAAC Accredited" },
   { icon: <FiGlobe className="w-5 h-5" />, value: "120+", label: "Intl. Collaborations" },

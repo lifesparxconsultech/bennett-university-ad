@@ -81,7 +81,7 @@ export default function HeroSection() {
 
       // no-cors means we can't read the response — assume success
       setStatus("success")
-      
+
       // Trigger PDF download
       const link = document.createElement("a")
       link.href = "/bourcher.pdf"
@@ -123,12 +123,22 @@ export default function HeroSection() {
               ADMISSIONS OPEN 2026
             </span>
 
-            <div className="space-y-1">
-              <p className="text-white/80 text-lg sm:text-xl font-medium">Bennett University</p>
+            <div className="space-y-2">
+              <p className="text-white/80 text-lg sm:text-xl font-medium">
+                Earn More. Lead More.
+              </p>
+
               <h1 className="text-4xl sm:text-5xl xl:text-6xl font-semibold text-white leading-tight tracking-tight">
-                Online <span className="text-red-500">MBA</span>
+                Online <span className="text-red-500">MBA</span> From Bennett University
               </h1>
-              <p className="text-white/90 text-xl sm:text-2xl font-semibold">(UGC-Approved)</p>
+
+              <p className="text-white/90 text-xl sm:text-2xl font-semibold">
+                UGC-Approved. Times Group-Backed.
+              </p>
+
+              <p className="text-white/70 text-sm sm:text-base leading-relaxed max-w-2xl">
+                Designed for working professionals ready for their next salary jump.
+              </p>
             </div>
 
             <p className="text-white/70 text-sm sm:text-base max-w-lg leading-relaxed">
@@ -137,39 +147,78 @@ export default function HeroSection() {
 
             <ul className="space-y-3">
               {[
-                "Learn from industry-aligned curriculum",
-                "Flexible online format (Live + Recorded)",
+                "Industry-aligned MBA curriculum",
+                "Flexible online format (Live + Recorded Classes)",
                 "Backed by The Times Group ecosystem",
+                "Ideal for working professionals",
+                "Career growth & salary advancement support",
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-white/85 text-sm sm:text-base">
+                <li
+                  key={item}
+                  className="flex items-center gap-3 text-white/85 text-sm sm:text-base"
+                >
                   <span className="flex-shrink-0 w-5 h-5 bg-red-600 rounded-full flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={3}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                   </span>
+
                   {item}
                 </li>
               ))}
             </ul>
 
             <div className="flex flex-wrap gap-4 pt-2">
-              <button onClick={scrollToForm} className="bg-red-600 hover:bg-red-500 active:bg-red-700 text-white px-7 py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 shadow-lg shadow-red-900/30 hover:-translate-y-0.5 cursor-pointer">
+              <button
+                onClick={scrollToForm}
+                className="bg-red-600 hover:bg-red-500 active:bg-red-700 text-white px-7 py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 shadow-lg shadow-red-900/30 hover:-translate-y-0.5 cursor-pointer"
+              >
                 Download Brochure
               </button>
-              <button onClick={scrollToForm} className="border border-white/30 hover:border-white/60 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-7 py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 hover:-translate-y-0.5 cursor-pointer">
+
+              <button
+                onClick={scrollToForm}
+                className="border border-white/30 hover:border-white/60 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-7 py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
+              >
                 Check Scholarship
               </button>
             </div>
 
-            <div className="inline-flex items-center gap-3 px-4 py-3">
+            <div className="inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
               <div className="w-9 h-9 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                <svg
+                  className="w-5 h-5 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                  />
                 </svg>
               </div>
+
               <div>
-                <p className="text-white/50 text-xs uppercase tracking-widest font-medium">Recognized by</p>
-                <p className="text-white font-semibold text-sm">UGC &amp; DEB Certified</p>
+                <p className="text-white/50 text-xs uppercase tracking-widest font-medium">
+                  Recognized & Trusted
+                </p>
+
+                <p className="text-white font-semibold text-sm">
+                  UGC-Approved • DEB Certified • Times Group-Backed
+                </p>
               </div>
             </div>
           </div>
@@ -293,7 +342,7 @@ export default function HeroSection() {
                       </>
                     ) : (
                       <>
-                        Check Eligibility
+                        Check My Eligibility Free
                         <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                         </svg>
