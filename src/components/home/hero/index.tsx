@@ -64,6 +64,15 @@ export default function HeroSection() {
 
     setStatus("loading")
 
+    // Meta Pixel Tracking
+    if (typeof window !== 'undefined' && (window as any).fbqIdentify) {
+      await (window as any).fbqIdentify(
+        form.email.trim().toLowerCase(),
+        form.name.trim(),
+        form.phone.trim().replace(/\D/g, '')
+      );
+    }
+
     try {
       await fetch(APPS_SCRIPT_URL, {
         method: "POST",
