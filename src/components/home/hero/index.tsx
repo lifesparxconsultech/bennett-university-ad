@@ -187,21 +187,6 @@ export default function HeroSection() {
               ))}
             </ul>
 
-            <div className="flex flex-wrap gap-4 pt-2">
-              <button
-                onClick={scrollToForm}
-                className="bg-red-600 hover:bg-red-500 active:bg-red-700 text-white px-7 py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 shadow-lg shadow-red-900/30 hover:-translate-y-0.5 cursor-pointer"
-              >
-                Download Brochure
-              </button>
-
-              <button
-                onClick={scrollToForm}
-                className="border border-white/30 hover:border-white/60 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-7 py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
-              >
-                Check Scholarship
-              </button>
-            </div>
 
             <div className="inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
               <div className="w-9 h-9 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
