@@ -246,6 +246,7 @@ export default function HeroSection() {
                     </p>
                   </div>
                   <button
+                    id="hero-submit-another-btn"
                     onClick={() => setStatus("idle")}
                     className="text-red-600 text-sm font-semibold hover:underline mt-2"
                   >
@@ -324,6 +325,7 @@ export default function HeroSection() {
                     type="button"
                     onClick={handleSubmit}
                     disabled={status === "loading"}
+                    id="hero-check-eligibility-btn"
                     className="w-full bg-red-600 hover:bg-red-500 active:bg-red-700 disabled:opacity-60 disabled:cursor-not-allowed text-white py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 shadow-md shadow-red-200 hover:shadow-red-300 hover:-translate-y-0.5 mt-2 flex items-center justify-center gap-2 group"
                   >
                     {status === "loading" ? (

@@ -106,10 +106,10 @@ export default function InvestmentSection() {
               </div>
 
               <div className="space-y-3">
-                <button onClick={scrollToForm} className="w-full bg-white hover:bg-gray-100 active:bg-gray-200 text-[#0f1e3c] text-sm font-semibold py-3 rounded-xl transition-all duration-200 cursor-pointer">
+                <button id="investment-check-eligibility-btn" onClick={scrollToForm} className="w-full bg-white hover:bg-gray-100 active:bg-gray-200 text-[#0f1e3c] text-sm font-semibold py-3 rounded-xl transition-all duration-200 cursor-pointer">
                   Check Eligibility
                 </button>
-                <button onClick={scrollToForm} className="w-full bg-white/10 hover:bg-white/20 active:bg-white/30 border border-white/20 text-white text-sm font-semibold py-3 rounded-xl transition-all duration-200 cursor-pointer">
+                <button id="investment-check-emi-btn" onClick={scrollToForm} className="w-full bg-white/10 hover:bg-white/20 active:bg-white/30 border border-white/20 text-white text-sm font-semibold py-3 rounded-xl transition-all duration-200 cursor-pointer">
                   Check Your EMI
                 </button>
               </div>

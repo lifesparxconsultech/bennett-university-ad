@@ -54,6 +54,7 @@ export default function FAQSection() {
                 className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
               >
                 <button
+                  id={`faq-toggle-${i}`}
                   onClick={() => toggle(i)}
                   className="w-full flex items-center justify-between px-6 py-4 text-left gap-4 group"
                 >
@@ -93,10 +94,10 @@ export default function FAQSection() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-            <button onClick={scrollToForm} className="bg-red-600 hover:bg-red-500 active:bg-red-700 text-white text-sm font-semibold px-8 py-3 rounded-full transition-all duration-200 shadow-lg shadow-red-900/30 hover:-translate-y-0.5 w-full sm:w-auto cursor-pointer">
+            <button id="faq-apply-now-btn" onClick={scrollToForm} className="bg-red-600 hover:bg-red-500 active:bg-red-700 text-white text-sm font-semibold px-8 py-3 rounded-full transition-all duration-200 shadow-lg shadow-red-900/30 hover:-translate-y-0.5 w-full sm:w-auto cursor-pointer">
               Apply Now
             </button>
-            <button onClick={scrollToForm} className="bg-white/10 hover:bg-white/20 border border-white/20 text-white text-sm font-semibold px-8 py-3 rounded-full transition-all duration-200 hover:-translate-y-0.5 w-full sm:w-auto cursor-pointer">
+            <button id="faq-talk-counselor-btn" onClick={scrollToForm} className="bg-white/10 hover:bg-white/20 border border-white/20 text-white text-sm font-semibold px-8 py-3 rounded-full transition-all duration-200 hover:-translate-y-0.5 w-full sm:w-auto cursor-pointer">
               Talk to Academic Counselor
             </button>
           </div>
