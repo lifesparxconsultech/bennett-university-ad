@@ -2,9 +2,11 @@
 
 import { scrollToForm } from "@/lib/scorll-to-form"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { useState } from "react"
 
 export default function HeroSection() {
+  const router = useRouter()
   const [form, setForm] = useState({ name: "", phone: "", email: "" })
   const [errors, setErrors] = useState({ name: "", phone: "", email: "" })
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
@@ -93,7 +95,7 @@ export default function HeroSection() {
 
       // Trigger PDF download
       const link = document.createElement("a")
-      link.href = "/bourcher.pdf"
+      link.href = "/broucher.pdf"
       link.download = "Bennett_University_Online_MBA_Brochure.pdf"
       document.body.appendChild(link)
       link.click()
@@ -101,6 +103,9 @@ export default function HeroSection() {
 
       setForm({ name: "", phone: "", email: "" })
       setErrors({ name: "", phone: "", email: "" })
+
+      // Redirect to thank you page
+      router.push("/thank-you")
     } catch {
       setStatus("error")
     }
