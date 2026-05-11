@@ -233,7 +233,7 @@ export default function HeroSection() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-gray-800 text-base sm:text-lg">Quick Eligibility Check</h3>
+                <h3 className="font-semibold text-gray-800 text-base sm:text-lg">Get Free Counselling</h3>
               </div>
 
               {/* Success State */}
@@ -326,36 +326,61 @@ export default function HeroSection() {
                   )}
 
                   {/* Submit */}
-                  <button
-                    type="button"
-                    onClick={handleSubmit}
-                    disabled={status === "loading"}
-                    id="hero-check-eligibility-btn"
-                    className="w-full bg-red-600 hover:bg-red-500 active:bg-red-700 disabled:opacity-60 disabled:cursor-not-allowed text-white py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 shadow-md shadow-red-200 hover:shadow-red-300 hover:-translate-y-0.5 mt-2 flex items-center justify-center gap-2 group"
-                  >
-                    {status === "loading" ? (
-                      <>
-                        <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
-                        </svg>
-                        Submitting...
-                      </>
-                    ) : (
-                      <>
-                        Check My Eligibility Free
-                        <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                        </svg>
-                      </>
-                    )}
-                  </button>
+                  <div className="space-y-3 pt-2">
+                    <button
+                      type="button"
+                      onClick={handleSubmit}
+                      disabled={status === "loading"}
+                      id="hero-check-eligibility-btn"
+                      className="w-full bg-red-600 hover:bg-red-500 active:bg-red-700 disabled:opacity-60 disabled:cursor-not-allowed text-white py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 shadow-md shadow-red-200 hover:shadow-red-300 hover:-translate-y-0.5 flex items-center justify-center gap-2 group"
+                    >
+                      {status === "loading" ? (
+                        <>
+                          <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
+                          </svg>
+                          Submitting...
+                        </>
+                      ) : (
+                        <>
+                          Apply Now
+                          <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                          </svg>
+                        </>
+                      )}
+                    </button>
+
+                    <div className="bg-red-50 border border-red-100 rounded-lg py-2 px-3 text-center">
+                      <p className="text-[11px] sm:text-xs text-red-700 font-medium">
+                        No spam. Counsellor will call within 24 hrs.
+                      </p>
+                    </div>
+                  </div>
 
                   <p className="text-xs text-gray-400 text-center leading-relaxed">
                     By clicking, you agree to our privacy policy and to receive program updates.
                   </p>
                 </div>
               )}
+            </div>
+
+            {/* Benefit Bullets */}
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                "Flexible EMI Options",
+                "Scholarship Upto 10K",
+                "Placement Assistant From Day 1",
+                "100% Online, UGC-DEB Recognised",
+              ].map((benefit) => (
+                <div key={benefit} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-3 py-2">
+                  <svg className="w-4 h-4 text-red-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm font-medium text-white/90">{benefit}</span>
+                </div>
+              ))}
             </div>
           </div>
 
