@@ -131,7 +131,7 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 items-center">
 
           {/* LEFT CONTENT */}
-          <div className="space-y-6">
+          <div className="space-y-6 order-2 lg:order-1">
             <span className="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/40 text-red-400 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide backdrop-blur-sm">
               <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
               ADMISSIONS OPEN 2026
@@ -223,7 +223,7 @@ export default function HeroSection() {
           </div>
 
           {/* RIGHT FORM */}
-          <div className="w-full max-w-md mx-auto lg:ml-auto">
+          <div className="w-full max-w-md mx-auto lg:ml-auto order-1 lg:order-2">
             <div className="bg-white rounded-2xl shadow-2xl shadow-black/30 overflow-hidden">
 
               {/* Form Header */}
