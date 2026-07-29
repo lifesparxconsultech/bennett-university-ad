@@ -1,6 +1,5 @@
 "use client"
 
-import { scrollToForm } from "@/lib/scorll-to-form"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
@@ -76,21 +75,22 @@ export default function HeroSection() {
     }
 
     try {
-      await fetch(APPS_SCRIPT_URL, {
+      const res = await fetch("/api/submit-lead", {
         method: "POST",
-        mode: "no-cors", // Apps Script requires no-cors
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          timestamp: new Date().toISOString(),
-          name: form.name,
+          fullName: form.name,
           email: form.email,
           phone: form.phone,
-          program: "Online MBA",
-          source: "Hero Form",
+          course: "Online MBA",
+          formName: "Bennett University Hero Form",
+          source: "Bennett Landing Page",
         }),
       })
 
-      // no-cors means we can't read the response — assume success
+      const data = await res.json()
+      if (!res.ok || !data.ok) throw new Error(data.error || "Submit failed")
+
       setStatus("success")
 
       // Trigger PDF download
@@ -104,7 +104,6 @@ export default function HeroSection() {
       setForm({ name: "", phone: "", email: "" })
       setErrors({ name: "", phone: "", email: "" })
 
-      // Redirect to thank you page
       router.push("/thank-you")
     } catch {
       setStatus("error")
